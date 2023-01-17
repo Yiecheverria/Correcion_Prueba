@@ -47,3 +47,4 @@ public class DbConfig {
         return jdbi.onDemand(BookRepository.class);
     }
 }
+// error aqui
