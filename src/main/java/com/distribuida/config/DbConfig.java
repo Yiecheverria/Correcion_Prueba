@@ -34,6 +34,7 @@ public class DbConfig {
         HikariDataSource dataSource = new HikariDataSource(config);
         return dataSource;
     }
+
     @Produces
     @ApplicationScoped
     public Jdbi jdbi (DataSource dataSource){
@@ -41,6 +42,7 @@ public class DbConfig {
         ret.installPlugin(new SqlObjectPlugin());
         return ret;
     }
+
     @Produces
     @ApplicationScoped
     public BookRepository bookRepository(Jdbi jdbi){
